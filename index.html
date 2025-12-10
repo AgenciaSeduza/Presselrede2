@@ -1,1 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Acesso Exclusivo</title>
 
+  <meta name="description" content="Acesso privado a uma comunidade exclusiva.">
+
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@500;900&display=swap" rel="stylesheet">
+
+  <!-- ✅ TIKTOK PIXEL -->
+  <script>
+  !function (w, d, t) {
+    w.TiktokAnalyticsObject=t;
+    var ttq=w[t]=w[t]||[];
+    ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"];
+    ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat([].slice.call(arguments)))}}; 
+    for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);
+    ttq.load=function(e){
+      var s=d.createElement("script");
+      s.async=true;
+      s.src="https://analytics.tiktok.com/i18n/pixel/events.js?sdkid="+e+"&lib="+t;
+      d.getElementsByTagName("script")[0].parentNode.insertBefore(s,d.getElementsByTagName("script")[0]);
+    };
+    ttq.load('D4S9ESRC77UBCU8NEQOG');
+    ttq.page();
+  }(window, document, 'ttq');
+  </script>
+
+  <style>
+    body{background:#0a0015;color:#fff;font-family:Roboto,sans-serif;display:flex;align-items:center;justify-content:center;min-height:100vh}
+    .box{max-width:380px;background:#120021;border-radius:20px;padding:22px;border:2px solid #8a2be2}
+    .title{font-family:'Bebas Neue';font-size:38px;text-align:center}
+    .subtitle{text-align:center;font-size:14px;color:#ddd;margin-top:6px}
+    .btn{display:block;margin-top:20px;background:#ba55d3;padding:16px;border-radius:40px;text-align:center;color:#fff;font-weight:900;text-decoration:none}
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <div class="title">ACESSO PRIVADO</div>
+    <div class="subtitle">Conteúdo exclusivo disponível por tempo limitado</div>
+
+    <a id="enter-btn" class="btn" href="https://apextry.com/go/tktkadsrede" target="_blank">
+      Solicitar Acesso
+    </a>
+  </div>
+
+  <!-- ✅ ViewContent + InitiateCheckout -->
+  <script>
+    document.addEventListener("DOMContentLoaded",function(){
+      if(window.ttq){
+        ttq.track("ViewContent",{
+          content_id:"PRIVATE_ACCESS",
+          content_type:"service"
+        });
+      }
+    });
+
+    document.getElementById("enter-btn").addEventListener("click",function(){
+      if(window.ttq){
+        ttq.track("InitiateCheckout",{
+          value:18,
+          currency:"BRL",
+          content_id:"PRIVATE_ACCESS",
+          content_type:"service"
+        });
+      }
+    });
+  </script>
+</body>
+</html>
